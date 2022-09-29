@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Bookshelf</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+
+<body>
+  <header class="top-bar">
+    <div class="container">
+      <div class="menu-wrapper">
+        <button id="btn-dashboard" class="btn btn-dashboard"><img src="./assets/img/favicon.ico" alt="icon" width="100%"></button>
+      </div>
+      <h1 class="logo"><a href="">My Bookshelf</a></h1>
+      <div class="menu-wrapper">
+        <form action="" id="search-box" class="search-box">
+          <input type="search" name="txt-search" id="txt-search" class="txt-search" placeholder="Search">
+          <input type="submit" value="" id="btn-search" class="btn-search fa-solid fa-magnifying-glass">
+        </form>
+        <button id="btn-search-toggle" class="btn btn-search-toggle"></button>
+        <button id="btn-add" class="btn btn-add fa-solid fa-plus fa-2x"></button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div id="dashboard" class="dashboard">
+      <div class="dashboard-content">
+        <h2>Dashboard</h2>
+        <div class="sub-total-wrapper">
+          <div class="total sub-total">
+            <h4>Total Read</h4>
+            <p id="total-read" class="sub-total-book">0</p>
+          </div>
+          <div class="total sub-total">
+            <h4>Total Unread</h4>
+            <p id="total-unread" class="sub-total-book">0</p>
+          </div>
+        </div>
+        <div class="total">
+          <h3>Total Book</h3>
+          <p id="total-book" class="total-book">0</p>
+        </div>
+      </div>
+    </div>
+    <div class="content container">
+      <section class="content-wrapper">
+        <h2 class="content-header">Unread Book</h2>
+        <div id="unread-list" class="content-list unread-list"></div>
+      </section>
+      <section class="content-wrapper">
+        <h2 class="content-header">Finished Book</h2>
+        <div id="read-list" class="content-list read-list"></div>
+      </section>
+    </div>
+    <div id="popup-wrapper" class="popup-wrapper">
+      <div class="popup-form">
+        <h2 class="form-header">Add New Book</h2>
+        <form action="" id="book-form" class="book-form">
+          <div class="input">
+            <label for="txt-book-title">Title</label>
+            <input type="text" name="txt-book-title" id="txt-book-title" placeholder="ex: Harry Potter and the Goblet of Fire" required>
+          </div>
+          <div class="input">
+            <label for="txt-book-author">Author</label>
+            <input type="text" name="txt-book-author" id="txt-book-author" placeholder="ex: J.K. Rowling" required>
+          </div>
+          <div class="input">
+            <label for="num-book-year">Year</label>
+            <input type="number" name="num-book-year" id="num-book-year" placeholder="ex: 2000" min="1000" required>
+          </div>
+          <div class="input-inline">
+            <input type="checkbox" name="check-book-status" id="check-book-status">
+            <label for="check-book-status">Finished reading</label>
+          </div>
+          <input type="submit" id="form-submit" class="form-submit" value="Add book to the list">
+        </form>
+      </div>
+    </div>
+    <div id="edit-popup-wrapper" class="popup-wrapper">
+      <div id="edit-popup-form" class="popup-form">
+        <h2 class="form-header">Edit book data</h2>
+        <form action="" id="edit-book-form" class="book-form">
+          <div class="input">
+            <label for="txt-edit-book-title">Title</label>
+            <input type="text" name="txt-edit-book-title" id="txt-edit-book-title" required>
+          </div>
+          <div class="input">
+            <label for="txt-edit-book-author">Author</label>
+            <input type="text" name="txt-edit-book-author" id="txt-edit-book-author" required>
+          </div>
+          <div class="input">
+            <label for="num-edit-book-year">Year</label>
+            <input type="number" name="num-edit-book-year" id="num-edit-book-year" required>
+          </div>
+          <div class="input-inline">
+            <input type="checkbox" name="check-edit-book-status" id="check-edit-book-status">
+            <label for="check-edit-book-status">Finished reading</label>
+          </div>
+          <input type="submit" class="form-submit" value="Edit data">
+        </form>
+      </div>
+    </div>
+  <footer>
+    <h1 class="credit"> created by <span> Pahlevi Wahyu </span> <br> &copy 2022</h1>
+</footer>
+  </main>
+  <script src="./assets/js/storage.js"></script>
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
